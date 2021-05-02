@@ -1,0 +1,93 @@
+@keyframes increaseOpacity {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}
+
+@keyframes nameScroll {
+	from {
+		opacity:0;
+		transform:translateY(-50px);
+	}
+	to {
+		opacity:1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes buttonScroll {
+	from {
+		opacity:0;
+		transform:translateY(50px);
+	}
+	to {
+		opacity: 1;
+		transform:translateY(0);
+	}
+}
+
+@keyframes slideScroll {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.hero {
+	opacity: 0;
+	animation: increaseOpacity 1s;
+	animation-delay: 0.25s;
+	animation-fill-mode: forwards;
+}
+
+.hero h1 {
+	opacity:0;
+	animation: nameScroll 1s;
+	animation-delay: 0.75s;
+	animation-fill-mode: forwards;
+}
+
+.name a {
+	opacity: 0;
+	animation:buttonScroll 1s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+
+.hero ul li a {
+	opacity:0;
+	animation: slideScroll 0.5s;
+	animation-fill-mode: forwards;
+	animation-delay: 1.25s;
+}
+
+.hero ul #slide2 {
+	animation-delay: 1.5s;
+}
+
+.hero ul #slide3 {
+	animation-delay: 1.75s;
+}
+
+.hero ul #slide4 {
+	animation-delay: 2s;
+}
+
+.hero ul #slide5 {
+	animation-delay: 2.25s;
+}
+
+.hero .learn-more {
+	animation: buttonScroll 1s;
+	opacity: 0;
+	animation-delay: 2.5s;
+	animation-fill-mode: forwards;
+}

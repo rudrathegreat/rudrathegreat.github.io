@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rudra Sekhri</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="animations.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com"> 
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="cursor"></div>
+	<header>
+		<input type="checkbox" class="checkbox">
+			<div class="hamburger">
+				<div class="bar"></div>
+			</div>
+		<div class="menu">
+			<ul class="nav-list">
+				<li><a onclick="document.getElementById('home').scrollIntoView(true);">Home</a></li>
+				<li><a onclick="document.getElementById('about').scrollIntoView(true);">About</a></li>
+				<li><a onclick="document.getElementById('work').scrollIntoView(true);">Work</a></li>
+				<li><a onclick="document.getElementById('news').scrollIntoView(true);">News</a></li>
+				<li><a onclick="document.getElementById('contacts').scrollIntoView(true);">Contacts</a></li>
+			</ul>
+			<img src="" alt="">
+		</div>
+	</header>
+	<div class="hero" id="home">
+		<div class="name">
+			<h1>Rudra Sekhri</h1>
+			<a href="">See My Work</a>
+		</div>
+		<ul>
+			<li><a onclick="document.getElementById('home').scrollIntoView(true);" id="slide1">01</a></li>
+			<li><a onclick="document.getElementById('work').scrollIntoView(true);" id="slide2">02</a></li>
+			<li><a onclick="document.getElementById('about').scrollIntoView(true);" id="slide3">03</a></li>
+			<li><a onclick="document.getElementById('news').scrollIntoView(true);" id="slide4">04</a></li>
+			<li><a onclick="document.getElementById('contacts').scrollIntoView(true);" id="slide5">05</a></li>
+		</ul>
+		<a onclick="document.getElementById('work').scrollIntoView(true);" class="learn-more">Scroll Down to Learn More</a>
+	</div>
+	<div class="work" id="work">
+		<h1 class="title">Work</h1>
+		<div class="position">
+			<h2>Astronomer at OzGrav and UTMOST Team</h2>
+			<hr>
+			<div class="grid">
+				<div class="cell">
+					<h3>FRB20210303A found by UTMOST</h3>
+					<div class="img" style="background:url('frb.png'); background-repeat: no-repeat; background-size:cover; background-position: center;"></div>
+					<a href="https://astronomy.swin.edu.au/research/utmost/?p=2646" class="link">Learn More</a>
+				</div>
+				<div class="cell">
+					<h3>UTMOST 2D Upgrade</h3>
+					<div class="img" style="background:url('molonglo.jpg'); background-repeat: no-repeat; background-size:cover; background-position:center;"></div>
+					<a href="https://astronomy.swin.edu.au/research/utmost/?page_id=1736" class="link">Learn More</a>
+				</div>
+				<div class="cell">
+					<h3>Swinburne Encyclopedia of Pulsars (In Dev)</h3>
+					<div class="img"></div>
+					<a href="SEP.html" class="link">Learn More</a>
+				</div>
+			</div>
+		</div>
+		<div class="position">
+			<h2>Envrionmentalist</h2>
+			<hr>
+			<div class="grid">
+				<div class="cell">
+					<h3>The Earth Needs You</h3>
+					<div class="img" style="background: url('cover.png'); background-size:cover; background-repeat: no-repeat; background-position: center;"></div>
+					<a href="https://www.amazon.com.au/Earth-Needs-You-Climate-Change-ebook/dp/B09165H6RN/" class="link">Learn More</a>
+				</div>
+				<div class="cell">
+					<h3>Robot Walking School Bus</h3>
+					<div class="img" style="background: url('r3.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center;"></div>
+					<a href="https://www.ngv.vic.gov.au/victorian-design-challenge-2019/" class="link">Learn More</a>
+				</div>
+				<div class="cell">
+					<h3>Water Quality Monitoring System</h3>
+					<div class="img" style="background: url('water.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center;"></div>
+					<a href="https://rudrathegreat.github.io/mpl-makers-club/WQCS.html" class="link">Learn More</a>
+				</div>
+			</div>
+		</div>
+		<div class="position">
+			<h2>Other Positions</h2>
+			<hr>
+			<div class="grid">
+				<div class="cell">
+					<h3>Author of Several Books</h3>
+					<div class="img" style="background: url('cover.png'); background-size:cover; background-repeat: no-repeat; background-position: center;"></div>
+					<a href="https://www.amazon.com.au/Earth-Needs-You-Climate-Change-ebook/dp/B09165H6RN/"  class="link">Learn More</a>
+				</div>
+				<div class="cell">
+					<h3>Ambassador at IAAC</h3>
+					<div class="img" style="background: url('nebula.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center;"></div>
+					<a href="https://iaac.space/en/rudsekhri" class="link">Learn More</a>
+				</div>
+				<div class="cell">
+					<h3>Public Speaker at Various Events</h3>
+					<div class="img" style="background: url('image.jpg'); background-size:cover; background-repeat: no-repeat; background-position: center;"></div>
+					<a href="speaker.html" class="link">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="about" id="about">
+		<div class="grid">
+			<div class="cell">
+				<h1>About</h1>
+				<p>Hi my name is Rudra. I’m a high school student here in australia. i’m the only student in australia who is not only doing school studies but is also actively working with astronomers on various research projects. i’m also an  environmentalist, working with local governments and universities on several projects. i am also an author, publishing my book, the earth needs you on amazon.</p>
+			</div>
+			<div class="cell">
+				<div class="me"></div>
+			</div>
+		</div>
+	</div>
+	<div class="news" id="news">
+		<div class="outer-grid">
+			<div class="main">
+				<div class="main-img"></div>
+				<h1>Became ambassador of IAAC</h1>
+			</div>
+			<div class="small-news">
+				<div class="cell">
+					<h1>My Book 'The Earth Needs You' has now been published!</h1>
+					<hr>
+				</div>
+				<div class="cell">
+					<h1>1 Day Til my Publication of 'The Earth Needs You'</h1>
+					<hr>
+				</div>
+				<div class="cell">
+					<h1>We have discovered a Fast Radio Burst at Molonglo!</h1>
+					<hr>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="contacts" id="contacts">
+		<div class="name-email">
+			<div class="name">
+				<h1 class="name-title">Name</h1>
+				<input type="text">
+			</div>
+			<div class="email">
+				<h1>Email</h1>
+				<input type="text">
+			</div>
+		</div>
+		<h1 class="text">Text</h1>
+		<input type="text" class="text-field">
+		<a href="">Send</a>
+	</div>
+	<div class="footer">
+		<p>Copyright &copy; 2021. Rudra Sekhri. All Rights Reserved. Developed by Rudra Sekhri</p>
+		<p>Follow me on social media</p>
+		<div class="social-media">
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+		</div>
+	</div>
+	<script src="app.js"></script>
+	<script src="cursor.js"></script>
+</body>
+</html>
