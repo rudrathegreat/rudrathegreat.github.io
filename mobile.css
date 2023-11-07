@@ -1,0 +1,101 @@
+@media only screen and (max-width: 725px) {
+    h1, h2, p, a {
+        letter-spacing:0 !important;
+    }
+
+    h1 {
+        font-size:8vw !important;
+    }
+
+    p {
+        font-size:3vw !important;
+    }
+
+    a {
+        border-width: 1px !important;
+        font-size:4vw !important;
+        padding:2vh 4vw !important;
+    }
+
+    .about h1 {
+        font-size: 6vw !important;
+    }
+
+    .about h2 {
+        font-size:4vw !important;
+    }
+
+    .about p {
+        display:none !important;
+    }
+
+    .awards {
+        flex-direction: column !important;
+    }
+
+    .awards-list p {
+        text-align: left !important;
+        width:80vw;
+    }
+
+    .awards-list p:nth-last-child(2) {
+        display:none;
+    }
+
+    .awards-list p:nth-last-child(1) {
+        display:none;
+    }
+    .awards .link p {
+        width:80vw;
+    }
+    
+    .contact .socials a {
+        font-size:2vw !important;
+    }
+
+    .contact .socials a:nth-last-child(1) {
+        display:none;
+    }
+
+    .footer .main {
+        flex-direction:column !important;
+    }
+
+    .footer .navigation {
+        width:80vw;
+    }
+
+    .footer h1 {
+        font-size:6vw !important;
+    }
+
+    .hero-content .image {
+        width:50% !important;
+        height:100% !important;
+    }
+
+    .hero-content img {
+        object-position: 25% 0;
+    }
+
+    .hero h1 {
+        margin-top:10vh;
+        font-size:12vw !important;
+    }
+
+    .cursor {
+        display:none;
+    }
+
+    .navbar {
+        width:100vw;
+    }
+
+    .hero-content .text {
+        width:calc(50% - 3vw);
+    }
+
+    .hero-content canvas {
+        display:none !important;
+    }
+}

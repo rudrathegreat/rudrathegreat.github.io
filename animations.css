@@ -1,0 +1,176 @@
+* {
+    padding:0;
+    margin:0;
+}
+
+.loading h1 div {
+    animation: showText 1.5s ease forwards;
+    animation-delay:calc((var(--animation-index) - 1) * 300ms);
+}
+
+.loading .question p {
+    animation: showQuestion 1s ease forwards;
+    animation-delay:1200ms;
+}
+
+.loading {
+    animation:fade 0.5s ease forwards;
+    animation-delay:2.2s;
+}
+
+.hero-bg {
+    animation: scaleDown 1.5s ease forwards;
+    animation-delay:2.5s;
+}
+
+.hero h1 {
+    overflow: hidden;
+}
+
+.hero h1 div {
+    transform:translateY(100%);
+    animation: showText 1.5s ease forwards;
+    animation-delay:2.5s;
+}
+
+.hero .text {
+    opacity:0;
+    transform:translateY(5vh);
+    animation:revealHeroContent 1s ease forwards;
+    animation-delay:2.75s;
+}
+
+.hero .image {
+    opacity:0;
+    transform:translateY(5vh);
+    animation:revealHeroContent 1s ease forwards;
+    animation-delay:3.05s; 
+}
+
+.navbar {
+    opacity:0;
+    animation:fadeIn 0.5s ease forwards;
+    animation-delay:2.75s; 
+}
+
+@keyframes showText {
+    from {
+        transform:translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes showQuestion {
+    from {
+        transform:translateY(40%);
+        opacity:0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes revealHeroContent {
+    from {
+        transform:translateY(5vh);
+        opacity:0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(1.1);
+        opacity:0;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity:0.07;
+    }
+    
+    100% {
+        transform:scale(1);
+        opacity:0.07;
+    }
+}
+
+
+@keyframes fade {
+    from {
+        opacity:1;
+    }
+
+    to {
+        opacity:0;
+        pointer-events: none;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+
+    to {
+        opacity:1;
+    }
+}
+
+.line {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.line .char {
+    transform:translateY(150%);
+    transition:transform 0.75s ease;
+}
+
+.why h1 {
+    transition: opacity 0.75s ease, transform 0.75s ease;
+    opacity:0;
+    transform: translateY(3vh);
+}
+
+.why .boring p {
+    transition: opacity 0.75s ease, transform 0.75s ease;
+    opacity:0;
+    transform: translateY(3vh);
+}
+
+.why img, .about img {
+    transition: opacity 0.75s ease, transform 0.75s ease;
+    opacity:0;
+    transform: scale(0.95);
+}
+
+.more-work img {
+    transition: opacity 0.75s ease;
+    opacity:0;
+}
+
+.astronomy h1, .environment h1, .video h1, .featured h1, .featured img, .awards h1 {
+    transition: opacity 0.75s ease, transform 0.75s ease;
+    opacity:0;
+    transform: translateY(3vh);
+}
+
+.astronomy .cell, .environment .cell, .video .cell, .more-work .text a, .awards a, .awards .awards-list p {
+    transition: opacity 0.75s ease, transform 0.75s ease;
+    opacity:0;
+    transform: translateY(3vh);
+}
+
+.more-work .work-card {
+    transition: opacity 0.75s ease;
+    opacity:0;
+}

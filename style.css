@@ -1,0 +1,835 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+html.lenis {
+    height: auto;
+  }
+  
+.lenis.lenis-smooth {
+scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+overflow: hidden;
+}
+
+body {
+    background:white;
+    color:black;
+    font-family: "Inter", sans-serif;
+    font-weight:300;
+}
+
+::-webkit-scrollbar {
+    width:0px;
+}
+
+.loading {
+    background:white;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    padding:3vh 10vw;
+    z-index:20;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loading div {
+    width:100%;
+}
+
+.loading h1 {
+    font-size:12vw;
+    letter-spacing:-12px;
+    font-weight:300;
+    overflow:hidden;
+    line-height:1.15;
+}
+
+.loading h1 div {
+    transform:translateY(100%);
+    width:max-content;
+}
+
+.loading .second-line {
+    display:flex;
+    height:15vw;
+    align-items: center;
+}
+
+.loading .second-line .question {
+    width:40%;
+    height:75%;
+    margin-left:1vw;
+    border-radius:2vw;
+    border: 2px solid black;
+    font-size:3vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing:-3px;
+    margin-top:3%;
+    overflow:hidden;
+}
+
+.loading .question p {
+    transform:translateY(40%);
+    opacity:0;
+}
+
+.navbar {
+    z-index:5;
+    width:30vw;
+    background:rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    height:15vh;
+    position:fixed;
+    top:0;
+    right:0;
+    padding:1vh 4vw;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    opacity:0;
+}
+
+.navbar ul {
+    display:flex;
+    list-style:none;
+    width:100%;
+    justify-content: space-between;
+}
+
+.navbar ul li a {
+    font-weight:300;
+    text-decoration: none;
+    color:black;
+    font-size:1.75vw;
+    letter-spacing:-2px;
+    transition:color 0.2s ease-in-out;
+}
+
+.hero, .astronomy, .environment, .video {
+    width:100%;
+    height:100vh;
+    padding:5vh 7.5vw;
+    position:relative;
+}
+
+.hero-bg {
+    background:url('hero-bg.jpg');
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:98%;
+    height:98%;
+    position:absolute;
+    top:1%;
+    left:1%;
+    border-radius:3vw;
+    z-index:-1;
+    pointer-events: none;
+    opacity:0;
+    transform:scale(1.1);
+}
+
+.hero h1, .astronomy h1, .environment h1, .video h1 {
+    font-size:9vw;
+    letter-spacing: -10px;
+    font-weight:300;
+}
+
+.hero p, .astronomy p, .environment p, .video p {
+    font-size:2vw;
+    font-weight:300;
+    letter-spacing:-2px;
+}
+
+.hero a, .astronomy a, .environment a, .video a {
+    font-weight:300;
+    text-decoration: none;
+    color:black;
+    display:inline-block;
+    padding:1vh 1.5vw;
+    border-radius:1000px;
+    font-size:2vw;
+    letter-spacing:-2px;
+    border: 2px solid black;
+    width:max-content;
+}
+
+canvas {
+    display: block;
+  }
+  
+#imageContainer {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+    max-width: 100%;
+}
+
+#imageContainer:hover {
+    filter: saturate(100%);
+}
+
+#imageContainer > * {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+.hero .text {
+    width:calc(30% - 2vw);
+    display:flex;
+    flex-direction: column;
+    gap:3vh;
+    justify-content: flex-end;
+}
+
+.hero .hero-grid, .astronomy-grid, .environment-grid, .video-grid {
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    height:63vh;
+    gap:2vw;
+    margin-top:2vh;
+}
+
+.why {
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.why .importance, .why .title {
+    width:70%;
+    height:50%;
+    border-right:2px solid #ddd;
+}
+
+.why .boring, .why .annoying {
+    width:30%;
+    height:50%;
+}
+
+.why img {
+    width:100%;
+    height:100%;
+}
+
+.why .importance, .why .title, .why .boring {
+    padding:5vh 5vw;
+}
+
+.why h1 {
+    font-size:7vw;
+    letter-spacing: -10px;
+    font-weight:300;
+    line-height:0.9;
+}
+
+.why .boring p {
+    font-size:1.5vw;
+    letter-spacing:-1px;
+}
+
+.why .importance p {
+    font-size:2.5vw;
+    letter-spacing: -2px;
+    width:80%;
+}
+
+.why .importance .scrolling-indicator {
+    font-size:1vw;
+    letter-spacing:-1px;
+    margin-top:20vh;
+}
+
+.why .title, .why .boring {
+    display:flex;
+    align-items: end;
+    border-bottom:2px solid #ddd;
+}
+
+.astronomy, .environment, .video {
+    color:white;
+}
+
+.astronomy-bg {
+    background:url("astronomy-bg.jpg");
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:98%;
+    height:98%;
+    position:absolute;
+    top:1%;
+    left:1%;
+    border-radius:3vw;
+    z-index:-1;
+    pointer-events: none;
+}
+
+.astronomy h1, .environment h1, .video h1 {
+    width:70%;
+    font-size:6vw;
+    line-height:0.9;
+    padding:5vh 3vw;
+    background:rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius:2vw;
+    margin-top:3vh;
+    letter-spacing: -7px;
+}
+
+.astronomy .cell, .environment .cell, .video .cell {
+    width:45%;
+    background:rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding:5vh 5vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:3vh;
+    border-radius:2vw;
+}
+
+.astronomy p, .environment p, .video p {
+    font-size:2.5vw;
+}
+
+.astronomy-grid, .environment-grid, .video-grid {
+    height:50vh;
+    margin-top:5vh;
+}
+
+.astronomy a, .environment a, .video a {
+    color:white;
+    border-color:white;
+    font-size:2.5vw;
+}
+
+.environment-bg {
+    background:url("environment-bg.jpg");
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:98%;
+    height:98%;
+    position:absolute;
+    top:1%;
+    left:1%;
+    border-radius:3vw;
+    z-index:-1;
+    pointer-events: none;
+}
+
+.video-bg {
+    background:url('video-bg.jpg');
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:98%;
+    height:98%;
+    position:absolute;
+    top:1%;
+    left:1%;
+    border-radius:3vw;
+    z-index:-1;
+    pointer-events: none;
+}
+
+.more-work {
+    width:100%;
+    height:250vh;
+    padding:10vh 7.5vw;
+    display:flex;
+    gap:3vw;
+    position:relative;
+}
+
+.more-work > div {
+    width:calc((100% - 5vw)/2);
+}
+
+.more-work img {
+    width:100%;
+    height:50vh;
+    border-radius:2vw;
+    object-fit: cover;
+    margin-top:3vh;
+}
+
+.more-work h1 {
+    font-size:6vw;
+    line-height:0.9;
+    letter-spacing: -7px;
+    font-weight:300;
+}
+
+.more-work .first-col .work-card {
+    margin-top:3vh;
+    background:url('iaac-bg.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.work-card {
+    width:100%;
+    height:150vh;
+    border-radius:2vw;
+    display:flex;
+    align-items: end;
+}
+
+.work-card .work-info {
+    width:100%;
+    height:30vh;
+    padding:3vh 10%;
+    background:rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-bottom-left-radius:2vw;
+    border-bottom-right-radius: 2vw;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1.5vh;
+}
+
+.work-info p {
+    font-size:2vw;
+    letter-spacing:-2px;
+}
+
+.work-info a, .more-work .text a {
+    font-weight:300;
+    text-decoration: none;
+    color:white;
+    display:inline-block;
+    padding:1vh 1.5vw;
+    border-radius:1000px;
+    font-size:2vw;
+    letter-spacing:-2px;
+    border: 2px solid white;
+    width:max-content; 
+}
+
+.more-work .second-col .work-card {
+    margin-top:15vh;
+    background:url('water-sensors.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.more-work .second-col, .more-work .first-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.more-work .text p {
+    font-size:2vw;
+    font-weight:300;
+    letter-spacing: -2px;
+    line-height:1.3;
+}
+
+.more-work .text a {
+    color:black;
+    border-color:black;
+    margin-top:3vh;
+    font-size:2.5vw;
+    padding:1.5vh 2vw;
+}
+
+.more-work > p {
+    font-size:1vw;
+    letter-spacing: -1px;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:3vh;
+}
+
+.about {
+    width:100%;
+    height:100vh;
+    padding:7.5vh 5vw;
+    display:flex;
+    gap:3vw;
+    background:white;
+    z-index:2;
+    position:relative;
+}
+
+.about .text {
+    width:calc(60% - 3vw);
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about h1 {
+    font-size:4vw;
+    letter-spacing:-5px;
+    font-weight:300;
+    line-height:1.1;
+    width:95%;
+}
+
+.about p {
+    font-size:1.75vw;
+    color:#555;
+    font-weight:200;
+    line-height:1.3;
+    letter-spacing:-1.5px;
+    width:95%;
+}
+
+.about h2 {
+    font-weight:300;
+    width:95%;
+    text-align:right;
+    font-size:2.5vw;
+    margin-top:1.5vh;
+    letter-spacing:-2.5px;
+}
+
+.about .image {
+    width:40%;
+}
+
+.about img {
+    object-fit: cover;
+    width:100%;
+    height:100%;
+    border-radius:2vw;
+}
+
+.featured {
+    width:100%;
+    height:50vh;
+    padding:5vh 0;
+}
+
+.featured h1 {
+    padding-left:5vw;
+    font-size:6vw;
+    letter-spacing:-7px;
+    font-weight:300;
+}
+
+.featured .organisations {
+    display:flex;
+    width:100%;
+    padding:5vh 5vw;
+    border-top:2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    justify-content: space-between;
+    margin-top:5vh;
+}
+
+.organisations img {
+    width:9vw;
+}
+
+.awards {
+    width:100%;
+    height:100vh;
+    padding:5vh 5vw;
+    display:flex;
+    gap:3vw;
+}
+
+.awards .awards-list {
+    width:65%;
+}
+
+.awards .title {
+    width:calc(35% - 3vw);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.awards h1 {
+    font-size:6vw;
+    font-weight:300;
+    letter-spacing:-7px;
+}
+
+.awards-list p {
+    font-size:1.75vw;
+    font-weight:300;
+    padding:5vh 0;
+    width:100%;
+    text-align:right;
+    letter-spacing:-1.5px;
+    border-top:2px solid #ddd;
+}
+
+.awards .title p {
+    font-size:2vw;
+    font-weight:300;
+    letter-spacing:-2px;
+}
+
+.awards a {
+    font-size:2vw;
+    display:inline-block;
+    width:max-content;
+    border:2px solid black;
+    padding:1vh 1.5vw;
+    border-radius:1000px;
+    text-decoration:none;
+    letter-spacing:-2px;
+    color: black;
+    margin: 3vh 0;
+}
+
+.contact {
+    width:100%;
+    height:100vh;
+    padding:0vh 10vw;
+    position:relative;
+}
+
+.contact-content {
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    position:relative;
+}
+
+.contact h1 {
+    font-size:7vw;
+    letter-spacing:-7.5px;
+    font-weight:300;
+    text-align: center;
+}
+
+.contact-bg {
+    background:url('contact-bg.jpg');
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:98%;
+    height:98%;
+    position:absolute;
+    top:1%;
+    left:1%;
+    border-radius:3vw;
+    z-index:-1;
+    pointer-events: none;
+    opacity:0.07;
+}
+
+.contact-content > a {
+    font-size:3vw;
+    font-weight:300;
+    text-decoration: none;
+    color:black;
+    padding:1.5vh 2.5vw;
+    width:max-content;
+    border:2px solid black;
+    border-radius:1000px;
+    letter-spacing:-3px;
+    margin-top:3vh;
+}
+
+.socials {
+    position:absolute;
+    bottom:3vh;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.socials a {
+    text-decoration:none;
+    color:black;
+    font-size:1.25vw;
+    letter-spacing:-0.5px;
+}
+
+.footer {
+    width:100%;
+    height:100vh;
+    position: relative;
+}
+
+.footer .main {
+    width:100%;
+    padding:10vh 5vw;
+    display:flex;
+    gap:3vw;
+}
+
+.footer .ending {
+    width:80%;
+}
+
+.footer .navigation {
+    width: calc(20% - 3vw);
+    display:flex;
+    align-items: end;
+}
+
+.footer a {
+    font-size:2vw;
+    font-weight:300;
+    text-decoration: none;
+    letter-spacing: -2px;
+    color: black;
+    padding:1vh 1.5vw;
+    border-radius: 1000px;
+    border: 2px solid black;
+}
+
+.footer h1 {
+    font-size:5vw;
+    letter-spacing:-6px;
+    font-weight:300;
+    margin-bottom:1vh;
+}
+
+.ending p {
+    font-size:2.5vw;
+    font-weight:200;
+    letter-spacing:-3px;
+    margin-top:3vh;
+}
+
+.copyright {
+    width:100%;
+    height:40vh;
+    position:absolute;
+    bottom:0;
+    left:0;
+    text-align: center;
+    overflow:hidden;
+}
+
+.footer-bg {
+    background:url('footer-bg.jpg');
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:100%;
+    height:50%;
+    border-top-left-radius: 10vw;
+    border-top-right-radius: 10vw;
+    color:white;
+    font-size:25vw;
+    font-weight:200;
+    overflow:hidden;
+    justify-content: center;
+    letter-spacing:-15px;
+    line-height:0.8;
+    bottom:0;
+    left:0;
+    position: absolute;
+}
+
+.footer-bg p {
+    position:absolute;
+    bottom:-5vh;
+    left:0;
+    width:100vw;
+    text-align: center;
+}
+
+.copyright > p {
+    color:black;
+    font-size:25vw;
+    font-weight:200;
+    overflow:hidden;
+    justify-content: center;
+    letter-spacing:-15px;
+    line-height:0.8;
+    position:absolute;
+    bottom:-5vh;
+    left:0;
+    width:100vw;
+    text-align: center;
+}
+
+.hero a:hover, .awards a:hover, .more-work .second-col .text a:hover, .contact-content > a:hover, .footer a:hover {
+    background:black;
+    color:white;
+    transition:background 0.2s ease-out, color 0.2s ease-in-out;
+}
+
+.hero a, .awards a, .more-work .second-col .text a, .contact-content > a, .footer a {
+    transition:background 0.2s ease-out, color 0.2s ease-in-out, opacity 0.75s ease, transform 0.75s ease;
+}
+
+.astronomy a:hover, .environment a:hover, .video a:hover, .work-card .work-info a:hover {
+    background:white;
+    color:black;
+    transition:background 0.2s ease-out, color 0.2s ease-in-out;
+}
+
+.astronomy a, .environment a, .video a, .work-card .work-info a {
+    transition:background 0.2s ease-out, color 0.2s ease-in-out;
+}
+
+.cursor {
+    position:absolute;
+    top:0;
+    left:0;
+    width:1vw;
+    height:1vw;
+    background:black;
+    border-radius:100%;
+    pointer-events: none;
+    transform:translate(-50%, -50%);
+    z-index:10;
+    transition:background 0.2s ease-in-out;
+}
